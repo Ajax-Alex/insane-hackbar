@@ -389,6 +389,16 @@ function onClickMenu(event) {
     switch (event.currentTarget.name) {
 
 
+        case 'unionselect':
+            	var columns = prompt( "Amount of columns to use in the UNION SELECT Statement", "10" );
+               columns = Math.min(1000, parseInt( columns ));
+               var colArray = new Array();
+            for ( var i = 0 ; i < columns ; i++ ) {
+             colArray.push( i+1 );
+            }
+             var txt = " UNION SELECT " + colArray.join( ',' );
+            this.setSelectedText( txt );
+            break;
         case 'union':  
                 var columns = prompt( "Amount of columns to use in the UNION SELECT Statement", "10" );
                columns = Math.min(1000, parseInt( columns ));
@@ -1063,13 +1073,6 @@ function onClickMenu(event) {
             txt = this.getSelectedText();
             if (txt !== false) {
                 newString = SQL.selectionToSQLChar('oracle', txt);
-                this.setSelectedText(newString);
-            }
-            break;
-        case 'unionselect':
-            txt = this.getSelectedText();
-            if (txt !== false) {
-                newString = SQL.selectionToUnionSelect(txt);
                 this.setSelectedText(newString);
             }
             break;

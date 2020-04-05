@@ -6,8 +6,8 @@
   "author": "Ajax Alex",
   "homepage_url": "https://www.facebook.com/ajax.powerful",
   "icons": {
-    "48": "icons/icon.png",
-    "64": "icons/icon.png"
+    "48": "icons/icon48.png",
+    "64": "icons/icon64.png"
   },
   "permissions": ["tabs", "activeTab", "webRequest", "webRequestBlocking", "<all_urls>"],
   "devtools_page": "hackbar/hackbar.html",
