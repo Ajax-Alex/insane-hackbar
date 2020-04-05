@@ -1,6 +1,6 @@
 # Insane Hackbar for Firefox
 
-Hackbar moded by Mr. silent coder, re-moded by Ajax Alex
+Hackbar modded by Mr. silent coder, re-modded by Ajax Alex
 
 # Download:
 
