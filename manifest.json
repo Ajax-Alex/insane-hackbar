@@ -1,0 +1,17 @@
+{
+  "description": "This hackbar moded by Mr.silent coder, re-moded by Ajax Alex",
+  "manifest_version": 2,
+  "name": "Insane HacKBar",
+  "version": "1.1",
+  "author": "Ajax Alex",
+  "homepage_url": "https://www.facebook.com/ajax.powerful",
+  "icons": {
+    "48": "icons/icon.png",
+    "64": "icons/icon.png"
+  },
+  "permissions": ["tabs", "activeTab", "webRequest", "webRequestBlocking", "<all_urls>"],
+  "devtools_page": "hackbar/hackbar.html",
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
