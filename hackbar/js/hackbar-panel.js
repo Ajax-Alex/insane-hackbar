@@ -1125,7 +1125,7 @@ function onClickMenu(event) {
         case 'urldecode':
             txt = this.getSelectedText();
             if (txt !== false) {
-                newString = urldecode(txt);
+                newString = unescape(txt);
                 this.setSelectedText(newString);
             }
             break;
