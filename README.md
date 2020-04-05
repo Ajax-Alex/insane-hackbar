@@ -8,4 +8,4 @@ Firefox: https://addons.mozilla.org/en-US/firefox/addon/insane-hackbar/
 
 # Contact:
 
-Facebook: https://wwww.facebok.com/ajax.powerful
+Facebook: <a href="https://wwww.facebook.com/ajax.powerful" target="_blank">https://wwww.facebook.com/ajax.powerful</a>
