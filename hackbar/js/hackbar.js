@@ -16,7 +16,7 @@ function handleHidden() {
  */
 browser.devtools.panels.create(
     "Insane HacKBar",
-    "/icons/icon.png",
+    "/icons/icon32.png",
     "/hackbar/hackbar-panel.html"
 ).then(function(newPanel) {
     newPanel.onShown.addListener(handleShown);
